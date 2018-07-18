@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body,
+html,
+#root,
+.App,
+.Box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap,
+.Manger {
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    position: relative;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    .top {
+        width: 100%;
+        height: 40px;
+        background-color: #fbafaf;
+        line-height: 40px;
+        text-indent: 20px;
+    }
+    .content {
+        flex: 1;
+        background-color: #f3e8cb;
+        overflow: hidden;
+    }
+    .footer {
+        width: 100%;
+        height: 50px;
+        background-color: #fbafaf;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        display: flex;
+        a {
+            flex: 1;
+            color: #666;
+            text-align: center;
+            line-height: 50px;
+        }
+        a.active {
+            color: #000;
+        }
+    }
+}
+
+.Home,
+.Detail,
+.Submit,
+.Account {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .jumbotron {
+        width: 100%;
+        height: auto;
+        background-color: #f3e8cb;
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        .num {
+            display: inline-block;
+            padding: 0 20px;
+            height: 70px;
+            line-height: 70px;
+            box-sizing: border-box;
+            background-color: #99e1e5;
+            border-radius: 10px;
+            font-size: 42px;
+            text-align: center;
+        }
+        .magt {
+            text-align: center;
+            color: #8f8f94;
+            margin: 0 0 10px;
+            margin-bottom: 15px;
+            font-size: 21px;
+            font-weight: 200;
+        }
+        .btn {
+            width: 100%;
+            background: #99e1e5;
+            color: #000;
+            input {
+                margin: 0;
+                background-color: transparent;
+                line-height: 21px;
+                width: 100%;
+                height: 38px;
+                padding: 10px 15px;
+                border-radius: 3px;
+                outline: 0;
+                border: none;
+            }
+        }
+        .miantell {
+            overflow: hidden;
+            height: 20px;
+            position: relative;
+            font-size: 14px;
+            color: #8f8f94;
+            margin-top: 15px;
+            span {
+                width: 100%;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .section {
+        width: 100%;
+        flex: 1;
+        overflow-y: scroll;
+        #home {
+            width: 100%;
+            height: auto;
+            position: relative;
+            list-style: none;
+            background-color: #f2c6b4;
+            li {
+                overflow: hidden;
+                padding: 10px 15px;
+                border-bottom: solid 1px #ccc;
+                height: 60px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: inherit;
+                display: flex;
+                justify-content: space-between;
+                span {
+                    color: #71ccd1;
+                    font-size: 26px;
+                    font-weight: 700;
+                    line-height: 40px;
+                }
+                p {
+                    font-size: 22px;
+                    color: #666;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.Detail {
+    .title {
+        margin: 0 0 15px;
+        padding: 20px 15px;
+        background-color: #f2c6b4;
+    }
+    .container {
+        width: 100%;
+        flex: 1;
+        overflow-y: scroll;
+        ul {
+            width: 100%;
+            height: auto;
+            li {
+                text-align: center;
+                padding: 10px 0;
+                display: flex;
+                span {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+.Submit {
+    text-align: center;
+    .am-list-body {
+        background: #f3e8cb;
+    }
+    .am-list-item {
+        background: #f3e8cb;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+.Account {
+    .jumbotron {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+    table {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #99e1e5;
+        margin-bottom: 24px;
+        font-size: 12px;
+        thead {
+            background-color: #d9edf7;
+            th {
+                padding: 8px;
+            }
+        }
+        tbody {
+            text-align: center;
+            td {
+                padding: 8px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.Manger {
+    position: relative;
+    .add,
+    .change {
+        position: absolute;
+        top: 50px;
+        left: 5%;
+        z-index: 15;
+        width: 90%;
+        height: 200px;
+        border-radius: 20px;
+        background: #99e1e5;
+        padding: 10px;
+        text-align: center;
+        .btn {
+            margin-top: 10px;
+        }
+        .am-list-item {
+            background: #99e1e5;
+        }
+    }
+    .change {
+        height: 110px;
+    }
+    .header {
+        background: #fbafaf;
+    }
+    .userList {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        background-color: #f3e8cb;
+        text-align: center;
+        padding-top: 15px;
+        li {
+            position: relative;
+            overflow: hidden;
+            padding: 11px 15px;
+            display: flex;
+            span {
+                flex: 1;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.mark {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.menu {
+    background: #000;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+div.wrap.active {
+    transform: translate3d(50%, 50px, 0)
+}
